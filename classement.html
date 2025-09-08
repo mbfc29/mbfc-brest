@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MBFC - Classement</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .logo-equipe {
+      height: 60px; /* Taille augmentée */
+      width: auto;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    
+
+    table td {
+      vertical-align: middle;
+      padding: 10px;
+    }
+  </style>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <nav>
+      <!-- Nouveau logo dans le header -->
+      <div class="logo">
+        <img src="assets/img/logo_mbfc1.png" alt="Logo MBFC" style="height: 65px;">
+      </div>
+      </div>
+      <div class="burger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="presentation.html">Le Club</a></li>
+        <li><a href="classement.html">Classement</a></li>
+        <li><a href="buteurs.html">Buteurs</a></li>
+        <li><a href="resultats.html">Résultats</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="produits.html">Boutique</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="overlay" onclick="toggleMenu()"></div>
+  </header>
+
+ 
+    <main class="contenu">
+      <h1>Classement du Championnat MBFC</h1>
+      <table id="classement">
+        <thead>
+          <tr>
+            <th>Pos</th>
+            <th>Équipe</th>
+            <th>J</th>
+            <th>V</th>
+            <th>N</th>
+            <th>D</th>
+            <th>BP</th>
+            <th>BC</th>
+            <th>Diff</th>
+            <th>Pts</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td><img src="assets/img/P2.png" alt="P2" class="logo-equipe">P2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>2</td><td><img src="assets/img/D1.png" alt="D1" class="logo-equipe">D1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>3</td><td><img src="assets/img/D2.png" alt="D2" class="logo-equipe">D2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>4</td><td><img src="assets/img/D3.png" alt="D3" class="logo-equipe">D3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>5</td><td><img src="assets/img/KFC.png" alt="KFC" class="logo-equipe">KFC</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>6</td><td><img src="assets/img/Interne.png" alt="Internes" class="logo-equipe">Internes</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>7</td><td><img src="assets/img/dentaire.png" alt="DBFC" class="logo-equipe">DBFC</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </main>
+  
+
+  <footer>
+    <p>&copy; 2025 MBFC - Tous droits réservés| <a href="mentions-legales.html">Mentions légales</a></p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const burger = document.querySelector('.burger');
+      const navLinks = document.querySelector('.nav-links');
+      const overlay = document.querySelector('.overlay');
+
+      burger.classList.toggle('open');
+      navLinks.classList.toggle('active');
+      overlay.classList.toggle('active');
+    }
+
+    const couleurs = {
+      "D1": "#e0f7fa",
+      "D2": "#fce4ec",
+      "D3": "#bbdefb",
+      "DBFC": "#f3e5f5",
+      "KFC": "rgba(33, 33, 33, 0.6)"
+    };
+
+    const textesClairs = ["KFC"];
+
+    document.querySelectorAll("#classement tbody tr").forEach(row => {
+      const equipeCell = row.cells[1];
+      if (!equipeCell) return;
+      const text = equipeCell.textContent.trim();
+      if (couleurs[text]) {
+        row.style.backgroundColor = couleurs[text];
+        row.style.color = textesClairs.includes(text) ? "#ffffff" : "#000000";
+      }
+    });
+  </script>
+</body>
+</html>
