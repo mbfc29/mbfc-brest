@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Résultats des matchs - MBFC</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+   <nav>
+      <!-- Nouveau logo dans le header -->
+      <div class="logo">
+        <img src="assets/img/logo_mbfc1.png" alt="Logo MBFC" style="height: 65px;">
+      </div>
+      <div class="burger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="presentation.html">Le Club</a></li>
+        <li><a href="classement.html">Classement</a></li>
+        <li><a href="buteurs.html">Buteurs</a></li>
+        <li><a href="resultats.html">Résultats</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="produits.html">Boutique</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="overlay" onclick="toggleMenu()"></div>
+  </header>
+
+    <main class="contenu">
+      <h1>Résultats des matchs</h1>
+      <p class="info">
+        Le championnat MBFC 2025 n’a pas encore commencé.<br>
+        Les résultats des rencontres seront publiés ici dès la première journée ! ⚽️
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Journée</th>
+            <th>Match</th>
+            <th>Score</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Exemples à remplir plus tard :
+          <tr><td>1</td><td>P2 vs D1</td><td>2 - 1</td><td>01/10/2025</td></tr>
+          -->
+        </tbody>
+      </table>
+    </main>
+  
+
+  <footer>
+    <p>&copy; 2025 MBFC - Tous droits réservés| <a href="mentions-legales.html">Mentions légales</a></p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const burger = document.querySelector('.burger');
+      const navLinks = document.querySelector('.nav-links');
+      const overlay = document.querySelector('.overlay');
+
+      burger.classList.toggle('open');
+      navLinks.classList.toggle('active');
+      overlay.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,459 @@
+/* --- Import de police moderne --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* --- Réinitialisation de base --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* --- Couleurs principales --- */
+:root {
+  --rouge: #b30000;
+  --rouge-clair: #ff4d4d;
+  --blanc: #ffffff;
+  --gris-clair: #f5f5f5;
+  --gris: #e0e0e0;
+  --texte: #222;
+}
+
+/* Fond par défaut (desktop / tablette) */
+body {
+  background-image: url('../img/fond1.jpg'); /* chemin correct depuis assets/css/ */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* joli sur desktop */
+  color: var(--texte);
+  line-height: 1.6;
+}
+
+/* Fond pour smartphones */
+@media (max-width: 768px) {
+  body {
+    background-image: url('../img/fond-portrait.png'); /* version portrait */
+    background-size: cover;
+    background-position: center top;  /* cadre un peu plus haut si besoin */
+    background-attachment: scroll;    /* évite les bugs iOS */
+  }
+}
+
+
+main, .contenu {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  padding: 40px;
+  margin: 40px auto;
+  border-radius: 20px;
+  max-width: 1000px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+
+/* --- Header / Navigation --- */
+header {
+  background-color: #f0f0f0;
+  background-image: 
+    repeating-linear-gradient(
+      135deg, 
+      rgba(255, 255, 255, 0.2) 0px, 
+      rgba(255, 255, 255, 0.2) 1px, 
+      transparent 1px, 
+      transparent 6px
+    ),
+    linear-gradient(135deg, #f5f5f5, #dcdcdc);
+  background-blend-mode: lighten;
+  padding: 20px;
+  color: var(--rouge);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  list-style: none;
+}
+
+nav a {
+  color: var(--rouge);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background-color: var(--gris-clair);
+  color: var(--rouge);
+}
+
+/* --- Liens et boutons globaux --- */
+a {
+  color: var(--rouge);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--rouge-clair);
+}
+
+.btn {
+  background-color: var(--rouge);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background-color: var(--rouge-clair);
+}
+
+/* --- Burger menu --- */
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 20px;
+}
+
+.burger span {
+  width: 28px;
+  height: 3px;
+  background-color: var(--rouge);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.burger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- Overlay sombre --- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 900;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* --- Menu mobile actif --- */
+nav ul.active {
+  position: fixed;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  width: 80%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  z-index: 1000;
+  animation: slideDown 0.3s ease forwards;
+}
+
+nav ul.active a {
+  color: var(--rouge);
+  font-size: 1.1rem;
+  padding: 12px;
+  border-bottom: 1px solid var(--gris);
+}
+
+nav ul.active a:last-child {
+  border-bottom: none;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -20%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* --- Titres --- */
+h1 {
+  color: var(--rouge);
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+h2 {
+  color: var(--rouge);
+  font-size: 1.6rem;
+  margin: 35px 0 15px;
+}
+
+/* --- Pied de page --- */
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: var(--gris-clair);
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 60px;
+  border-top: 2px solid var(--gris);
+}
+
+/* --- Tableaux --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 14px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+th {
+  background-color: var(--rouge);
+  color: white;
+}
+
+/* --- Tableau des buteurs --- */
+.table-buteurs tbody tr:hover {
+  background-color: var(--gris-clair);
+  transition: background-color 0.3s ease;
+}
+
+.table-buteurs td:first-child {
+  font-weight: bold;
+  color: var(--rouge);
+}
+
+.table-buteurs td:nth-child(2) {
+  text-align: left;
+}
+
+.table-buteurs td:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.table-buteurs img.logo-equipe {
+  height: 36px;
+  width: auto;
+  border-radius: 4px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Produits dérivés --- */
+.produits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.produit {
+  background: white;
+  border: 2px solid var(--rouge);
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.produit:hover {
+  transform: scale(1.03);
+}
+
+.produit img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .contenu, main {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  .produit {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* --- Navigation glissante (optionnel) --- */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: var(--blanc);
+    height: 100vh;
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .burger {
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .overlay {
+    display: none;
+    z-index: 900;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+}
+
+/* --- Logos d'équipes dans le tableau uniquement --- */
+#classement img.logo-equipe {
+  height: 60px; /* Taille standard */
+  width: auto;
+}
+
+#classement img[alt="KFC"] {
+  height: 40px; /* Logo KFC plus petit */
+  width: auto;
+}
+
+/* --- Alignement des logos et texte dans le tableau --- */
+#classement td:nth-child(2),
+.table-buteurs td:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+/* Mettre tout le body en flex vertical */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* prend toute la hauteur de la page */
+    margin: 0;
+}
+
+/* Le contenu principal prend tout l'espace restant */
+main.contenu {
+    flex: 1;
+}
+
+/* Footer simple */
+footer {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 15px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
