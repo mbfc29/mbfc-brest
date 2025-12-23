@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
 
   <header>
@@ -14,6 +15,13 @@
       <div class="logo">
         <img src="assets/img/logo_mbfc1.png" alt="Logo MBFC" style="height: 65px;">
       </div>
+
+      <div class="burger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <ul class="nav-links">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="presentation.html">Le Club</a></li>
@@ -24,12 +32,8 @@
         <li><a href="produits.html">Boutique</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="burger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
     </nav>
+
     <div class="overlay" onclick="toggleMenu()"></div>
   </header>
 
@@ -44,8 +48,7 @@
       </p>
       <p>
         Cet événement a permis de réunir les nouveaux étudiants autour du football,
-        dans un esprit de <strong>convivialité</strong>, de <strong>fair-play</strong> et de <strong>partage</strong>,
-        marquant ainsi le début de leur vie universitaire.
+        dans un esprit de <strong>convivialité</strong>, de <strong>fair-play</strong> et de <strong>partage</strong>.
       </p>
     </section>
 
@@ -56,27 +59,48 @@
         s’est déroulée dans une ambiance à la fois sportive et émouvante.
       </p>
       <p>
-        À l’issue de la compétition, c’est <strong>l’équipe des D2</strong> qui s’est imposée,
-        remportant cette édition et inscrivant son nom au palmarès du tournoi.
+        À l’issue de la compétition, c’est <strong>l’équipe des D2</strong> qui s’est imposée.
       </p>
     </section>
 
-<section class="actu-card">
-  <h2>⚽ Match Médecine – Infirmiers : une première édition</h2>
-  <p>
-    Le <strong>jeudi 6 novembre</strong>, le MBFC a organisé la <strong>première édition du match Médecine – Infirmiers</strong>,
-    opposant des <strong>étudiants en médecine</strong> et des <strong>étudiants infirmiers</strong>,
-    au <strong>stade du Bouguen</strong>.
-  </p>
-  <p>
-    Cette rencontre, disputée dans une ambiance intense et conviviale, a tenu toutes ses promesses.
-    Les <strong>étudiants en médecine se sont imposés sur le score de 4–3</strong>,
-    grâce à un <strong>but inscrit dans les toutes dernières minutes du match</strong>.
-  </p>
-  <p>
-    Les réalisations côté Médecine sont à mettre au crédit de <strong>Loann</strong>,
-    <strong>Alexandre</strong>, <strong>Samuel</strong> et <strong>Batiste</strong>,
-    offrant une victoire mémorable acquise véritablement <strong>sur le fil</strong>.
-  </p>
-</section>
+    <section class="actu-card">
+      <h2>⚽ Match Médecine – Infirmiers : une première édition</h2>
+      <p>
+        Le <strong>jeudi 6 novembre</strong>, le MBFC a organisé la <strong>première édition du match Médecine – Infirmiers</strong>,
+        opposant des <strong>étudiants en médecine</strong> et des <strong>étudiants infirmiers</strong>,
+        au <strong>stade du Bouguen</strong>.
+      </p>
+      <p>
+        Les <strong>étudiants en médecine se sont imposés 4–3</strong>,
+        grâce à un <strong>but inscrit dans les toutes dernières minutes</strong>.
+      </p>
+      <p>
+        Buteurs : <strong>Loann</strong>, <strong>Alexandre</strong>, <strong>Samuel</strong> et <strong>Batiste</strong>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MBFC - Tous droits réservés | 
+      <a href="mentions-legales.html">Mentions légales</a>
+    </p>
+  </footer>
+
+  <!-- ✅ SCRIPT MANQUANT → BURGER FONCTIONNEL -->
+  <script>
+    function toggleMenu() {
+      const burger = document.querySelector('.burger');
+      const navLinks = document.querySelector('.nav-links');
+      const overlay = document.querySelector('.overlay');
+
+      burger.classList.toggle('open');
+      navLinks.classList.toggle('active');
+      overlay.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
+
+
 
