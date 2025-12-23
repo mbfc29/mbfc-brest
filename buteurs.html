@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Classement des Buteurs - MBFC</title>
   <link rel="stylesheet" href="assets/css/style.css">
+
   <style>
     .logo-equipe {
       height: 50px;
@@ -21,13 +22,37 @@
     table img {
       display: inline-block;
     }
+
+    /* 🥇🥈🥉 PODIUM */
+    .gold {
+      background-color: #d4af37;
+      font-weight: bold;
+    }
+
+    .silver {
+      background-color: #c0c0c0;
+      font-weight: bold;
+    }
+
+    .bronze {
+      background-color: #cd7f32;
+      font-weight: bold;
+    }
+
+    /* Lisibilité */
+    .gold td,
+    .silver td,
+    .bronze td {
+      color: #000;
+    }
   </style>
+
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
   <header>
-      <nav>
-      <!-- Nouveau logo dans le header -->
+    <nav>
       <div class="logo">
         <img src="assets/img/logo_mbfc1.png" alt="Logo MBFC" style="height: 65px;">
       </div>
@@ -51,60 +76,117 @@
   </header>
 
   <main class="contenu">
-      <h1>Classement des buteurs</h1>
-      <p style="text-align:center;">Le championnat n’a pas encore commencé, mais voici les joueurs à surveiller cette saison :</p>
+    <h1>Classement des buteurs</h1>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Position</th>
-            <th>Nom</th>
-            <th>Équipe</th>
-            <th>Buts</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Buteur</td>
-            <td>Noah Tanguy</td>
-            <td><img src="assets/img/KFC.png" alt="KFC" class="logo-equipe"> KFC</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>Attaquant droit</td>
-            <td>Nathan Cariou</td>
-            <td><img src="assets/img/D2.png" alt="D2" class="logo-equipe"> D2</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>Attaquant droit</td>
-            <td>Jules Bargain</td>
-            <td><img src="assets/img/D3.png" alt="D3" class="logo-equipe"> D3</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>Attaquant gauche</td>
-            <td>Alexandre Moniz</td>
-            <td><img src="assets/img/D1.png" alt="D1" class="logo-equipe"> D1</td>
-            <td>0</td>
-          </tr>
-        </tbody>
-      </table>
+    <table class="table-buteurs">
+      <thead>
+        <tr>
+          <th>Rang</th>
+          <th>Nom</th>
+          <th>Équipe</th>
+          <th>Buts</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr class="gold">
+          <td>1</td>
+          <td>Jules Bargain</td>
+          <td><img src="assets/img/D3.png" class="logo-equipe"> D2</td>
+          <td>10</td>
+        </tr>
+
+        <tr class="silver">
+          <td>2</td>
+          <td>Yvan Tanguy</td>
+          <td><img src="assets/img/D3.png" class="logo-equipe"> D2</td>
+          <td>9</td>
+        </tr>
+
+        <tr class="bronze">
+          <td>3</td>
+          <td>Loann Trolez</td>
+          <td><img src="assets/img/P2.png" class="logo-equipe"> P2</td>
+          <td>8</td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>Nico Milien</td>
+          <td><img src="assets/img/D2.png" class="logo-equipe"> D1</td>
+          <td>6</td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>Hadri Le Corre</td>
+          <td><img src="assets/img/KFC.png" class="logo-equipe"> KFC</td>
+          <td>6</td>
+        </tr>
+
+        <tr>
+          <td>5</td>
+          <td>Axel Cotty</td>
+          <td><img src="assets/img/KFC.png" class="logo-equipe"> KFC</td>
+          <td>5</td>
+        </tr>
+
+        <tr>
+          <td>6</td>
+          <td>Batou</td>
+          <td><img src="assets/img/D1.png" class="logo-equipe"> D1</td>
+          <td>4</td>
+        </tr>
+
+        <tr>
+          <td>7</td>
+          <td>Alex Moniz 🎷</td>
+          <td><img src="assets/img/D1.png" class="logo-equipe"> D1</td>
+          <td>3</td>
+        </tr>
+
+        <tr>
+          <td>7</td>
+          <td>Nathan Cariou</td>
+          <td><img src="assets/img/D2.png" class="logo-equipe"> D2</td>
+          <td>3</td>
+        </tr>
+
+        <tr>
+          <td>7</td>
+          <td>Maxime Tanguy</td>
+          <td><img src="assets/img/D2.png" class="logo-equipe"> D2</td>
+          <td>3</td>
+        </tr>
+
+        <tr>
+          <td>7</td>
+          <td>Noah Tanguy</td>
+          <td><img src="assets/img/KFC.png" class="logo-equipe"> KFC</td>
+          <td>3</td>
+        </tr>
+
+        <tr>
+          <td>7</td>
+          <td>Corentin Simier</td>
+          <td><img src="assets/img/D3.png" class="logo-equipe"> D3</td>
+          <td>3</td>
+        </tr>
+      </tbody>
+    </table>
   </main>
 
   <footer>
-    <p>&copy; 2025 MBFC - Tous droits réservés| <a href="mentions-legales.html">Mentions légales</a></p>
+    <p>&copy; 2025 MBFC - Tous droits réservés | 
+      <a href="mentions-legales.html">Mentions légales</a>
+    </p>
   </footer>
 
   <script>
     function toggleMenu() {
-      const burger = document.querySelector('.burger');
-      const navLinks = document.querySelector('.nav-links');
-      const overlay = document.querySelector('.overlay');
-
-      burger.classList.toggle('open');
-      navLinks.classList.toggle('active');
-      overlay.classList.toggle('active');
+      document.querySelector('.burger').classList.toggle('open');
+      document.querySelector('.nav-links').classList.toggle('active');
+      document.querySelector('.overlay').classList.toggle('active');
     }
   </script>
 </body>
