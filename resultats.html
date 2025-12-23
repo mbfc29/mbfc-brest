@@ -6,12 +6,18 @@
   <title>Résultats des matchs - MBFC</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    .logo-equipe {
+      height: 35px;
+      vertical-align: middle;
+      margin: 0 6px;
+    }
+  </style>
 </head>
 
 <body>
   <header>
-   <nav>
-      <!-- Nouveau logo dans le header -->
+    <nav>
       <div class="logo">
         <img src="assets/img/logo_mbfc1.png" alt="Logo MBFC" style="height: 65px;">
       </div>
@@ -25,7 +31,8 @@
         <li><a href="presentation.html">Le Club</a></li>
         <li><a href="classement.html">Classement</a></li>
         <li><a href="buteurs.html">Buteurs</a></li>
-        <li><a href="resultats.html">Résultats</a></li>
+        <li><a href="resultats.html" class="active">Résultats</a></li>
+        <li><a href="pronostics.html">Pronostics</a></li>
         <li><a href="actualites.html">Actualités</a></li>
         <li><a href="produits.html">Boutique</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -34,33 +41,39 @@
     <div class="overlay" onclick="toggleMenu()"></div>
   </header>
 
-    <main class="contenu">
-      <h1>Résultats des matchs</h1>
-      <p class="info">
-        Le championnat MBFC 2025 n’a pas encore commencé.<br>
-        Les résultats des rencontres seront publiés ici dès la première journée ! ⚽️
-      </p>
+  <main class="contenu">
+    <h1>Résultats des matchs</h1>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Journée</th>
-            <th>Match</th>
-            <th>Score</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Exemples à remplir plus tard :
-          <tr><td>1</td><td>P2 vs D1</td><td>2 - 1</td><td>01/10/2025</td></tr>
-          -->
-        </tbody>
-      </table>
-    </main>
-  
+    <table>
+      <thead>
+        <tr>
+          <th>Journée</th>
+          <th>Match</th>
+          <th>Score</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>11</td>
+          <td>
+            <img src="assets/img/KFC.png" alt="KFC" class="logo-equipe">
+            KFC
+            <strong>vs</strong>
+            D3
+            <img src="assets/img/D3.png" alt="D3" class="logo-equipe">
+          </td>
+          <td><strong>4 - 0</strong></td>
+          <td>17/12/2025</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
 
   <footer>
-    <p>&copy; 2025 MBFC - Tous droits réservés| <a href="mentions-legales.html">Mentions légales</a></p>
+    <p>&copy; 2025 MBFC - Tous droits réservés |
+      <a href="mentions-legales.html">Mentions légales</a>
+    </p>
   </footer>
 
   <script>
@@ -76,3 +89,4 @@
   </script>
 </body>
 </html>
+
