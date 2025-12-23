@@ -67,13 +67,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>1</td><td><img src="assets/img/P2.png" alt="P2" class="logo-equipe">P2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-          <tr><td>2</td><td><img src="assets/img/D1.png" alt="D1" class="logo-equipe">D1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-          <tr><td>3</td><td><img src="assets/img/D2.png" alt="D2" class="logo-equipe">D2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-          <tr><td>4</td><td><img src="assets/img/D3.png" alt="D3" class="logo-equipe">D3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-          <tr><td>5</td><td><img src="assets/img/KFC.png" alt="KFC" class="logo-equipe">KFC</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-          <tr><td>6</td><td><img src="assets/img/Interne.png" alt="Internes" class="logo-equipe">Internes</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-          <tr><td>7</td><td><img src="assets/img/dentaire.png" alt="DBFC" class="logo-equipe">DBFC</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>1</td><td><img src="assets/img/KFC.png" alt="KFC" class="logo-equipe">KFC</td><td>4</td><td>4</td><td>0</td><td>0</td><td>23</td><td>5</td><td>+18</td><td>12</td></tr>
+          <tr><td>2</td><td><img src="assets/img/P2.png" alt="P2" class="logo-equipe">P2</td><td>4</td><td>4</td><td>0</td><td>0</td><td>21</td><td>5</td><td>+16</td><td>12</td></tr>
+          <tr><td>3</td><td><img src="assets/img/D3.png" alt="D3" class="logo-equipe">D3</td><td>5</td><td>3</td><td>0</td><td>2</td><td>26</td><td>18</td><td>+8</td><td>9</td></tr>
+          <tr><td>4</td><td><img src="assets/img/D2.png" alt="D2" class="logo-equipe">D2</td><td>4</td><td>3</td><td>0</td><td>1</td><td>20</td><td>17</td><td>+5</td><td>9</td></tr>
+          <tr><td>5</td><td><img src="assets/img/D1.png" alt="D1" class="logo-equipe">D1</td><td>5</td><td>1</td><td>1</td><td>3</td><td>9</td><td>17</td><td>-8</td><td>4</td></tr>
+          <tr><td>6</td><td><img src="assets/img/Interne.png" alt="Internes" class="logo-equipe">Internes</td><td>5</td><td>0</td><td>1</td><td>4</td><td>8</td><td>18</td><td>-10</td><td>1</td></tr>
+          <tr><td>7</td><td><img src="assets/img/dentaire.png" alt="DBFC" class="logo-equipe">DBFC</td><td>5</td><td>0</td><td>0</td><td>5</td><td>7</td><td>36</td><td>-29</td><td>0</td></tr>
         </tbody>
       </table>
     </main>
@@ -99,10 +99,11 @@
       "D2": "#fce4ec",
       "D3": "#bbdefb",
       "DBFC": "#f3e5f5",
-      "KFC": "rgba(33, 33, 33, 0.6)"
+      "KFC": "rgba(33, 33, 33, 0.6)", 
+      "P2" : "#c94b5a"
     };
 
-    const textesClairs = ["KFC"];
+    const textesClairs = ["KFC" , "P2" ];
 
     document.querySelectorAll("#classement tbody tr").forEach(row => {
       const equipeCell = row.cells[1];
