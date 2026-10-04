@@ -418,11 +418,22 @@ footer {
   .produit {
     padding: 15px;
   }
+
+/* --- Correction logo P2 --- */
+#classement td:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
-.logo-p2 {
-  height: 25 px ! important ;
-  width: auto;
+
+#classement .logo-p2 {
+  height: 40px !important;
+  width: auto !important;
+  max-height: 40px;
+  object-fit: contain;
 }
+
 
 
 
