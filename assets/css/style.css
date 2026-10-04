@@ -403,12 +403,17 @@ th {
 
 /* --- Logos d'équipes dans le tableau uniquement --- */
 #classement img.logo-equipe {
-  height: 60px; /* Taille standard */
+  height: 60 px; /* Taille standard */
   width: auto;
 }
 
 #classement img[alt="KFC"] {
-  height: 40px; /* Logo KFC plus petit */
+  height: 40 px; /* Logo KFC plus petit */
+  width: auto;
+}
+
+#classement img[alt="KFC"] {
+  height: 40 px; /* Logo KFC plus petit */
   width: auto;
 }
 
