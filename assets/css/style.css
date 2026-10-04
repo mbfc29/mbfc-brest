@@ -428,9 +428,9 @@ footer {
 }
 
 #classement .logo-p2 {
-  height: 30px !important;
+  height: 20px !important;
   width: auto !important;
-  max-height: 30px;
+  max-height: 20px;
   object-fit: contain;
 }
 
